@@ -97,7 +97,7 @@
 
         <div id="placar">
             <div id="jogador">
-                <h2 id="jogador-nome">Kennedy Lima</h2>
+                <h2 id="jogador-nome">&nbsp;</h2>
                 <span id="jogador-pontos">0</span>
 
                 <ul id="jogador-escolha">
@@ -122,9 +122,29 @@
 
         </div>
 
+        <div id="mensagem">Mensagens</div>
         
     </div>
+    
+    <!-- Código JavaScript do jogo -->
     <script>
+
+        var jogadorNome;
+
+        // Escreve no placar o nome do jogador.
+        function definirJogadorNome(nome) {
+            document.getElementById('jogador-nome').innerHTML = nome;
+        }
+
+        // Escreve na tela uma mensagem.
+        function mensagem(texto){
+            document.getElementById('mensagem').innerHTML = texto;
+        }
+
+        jogadorNome = prompt("Qual é o seu nome?");
+        definirJogadorNome(jogadorNome)
+
+        mensagem('Bem-vindo ' + jogadorNome + ' está preparado? Escolha uma opção acima...');
 
     </script>
 
